@@ -1,0 +1,26 @@
+<?php
+
+use PHPUnit\Framework\TestCase;
+use ENGA5\ListaNumerica;
+
+class ListaNumericaTest extends TestCase{
+
+    public function testQuantidadeDeValoresVazios(){
+        $ln = new ListaNumerica;
+        $ln->setValores([]);
+
+        $this->assertEquals('Invalido', $ln->verificaQuantidade());
+    }
+
+    public function testUmValorMenorDoQue1000(){
+        $ln = new ListaNumerica();
+        $ln->setValores([9999, 55555, 55555, 55555, 55555]);
+
+        $this->asserEquals('Inválido', $ln-verificaValores();)
+    }
+
+
+};
+
+
+?>
